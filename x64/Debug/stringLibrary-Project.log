@@ -1,0 +1,21 @@
+﻿  stringLibrary-Project.cpp
+E:\Hadhod\c++ projects\stringLibrary-Project\stringLibrary-Project.cpp(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(41,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(64,26): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(292,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(359,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(389,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+E:\Hadhod\c++ projects\stringLibrary-Project\clsString.h(429,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'stringLibrary-Project.cpp')
+  
+  stringLibrary-Project.vcxproj -> E:\Hadhod\c++ projects\stringLibrary-Project\x64\Debug\stringLibrary-Project.exe
