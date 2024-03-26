@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <cctype>
 #include "clsString.h";
+#include "clsDate.h";
 
 
 using namespace std;
@@ -16,13 +17,17 @@ using namespace std;
 
 int main() {
 	
-	clsString myobj;
-	myobj.Value = "my name is khan";
-	cout << myobj.Value << endl;
+	clsDate date;
+
+	clsDate date2;
+	date2.day = 26;
+	date2.month = 3;
+	date2.year = 2024;
+
 	
-	// find all methods by typing "myobj." 
 	
-	// myobj.
+	cout << "\n";
+	cout << date.comparedates(date2);
 	
     system("pause>0");
 	return 0;
