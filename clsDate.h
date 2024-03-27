@@ -1013,7 +1013,5 @@ public:
 		return isValidDate(*this);
 	}
 
-
-
 };
 
