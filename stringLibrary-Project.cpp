@@ -10,6 +10,7 @@
 #include <cctype>
 #include "clsString.h";
 #include "clsDate.h";
+#include "clsPeriod.h";
 
 
 using namespace std;
@@ -17,18 +18,19 @@ using namespace std;
 
 int main() {
 	
-	clsDate date;
 
-	clsDate date2;
-	date2.day = 26;
-	date2.month = 3;
-	date2.year = 2024;
+    clsPeriod Period1(clsDate(1, 1, 2022), clsDate(10, 1, 2022));
+    Period1.Print();
 
-	
-	
-	cout << "\n";
-	cout << date.comparedates(date2);
-	
+    clsPeriod Period2(clsDate(1, 1, 2022), clsDate(5, 1, 2022));
+    Period2.Print();
+
+    cout << "\n";
+
+    cout << clsPeriod::overlapCountBetween2Periods(Period1, Period2);
+    
+    
+
     system("pause>0");
 	return 0;
 }

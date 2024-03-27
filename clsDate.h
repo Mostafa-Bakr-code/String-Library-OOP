@@ -932,6 +932,22 @@ public:
 		 return actualVacDays(*this, vacEnds);
 	 }
 
+	 static short CalculateBusinessDays(clsDate DateFrom, clsDate DateTo)
+	 {
+
+		 short Days = 0;
+		 while (isdate1beforedate2(DateFrom, DateTo))
+		 {
+			 if (isBusinessDay(DateFrom))
+				 Days++;
+
+			 DateFrom = increasedatebyoneday(DateFrom);
+		 }
+
+		 return Days;
+
+	 }
+
 	 //___________________________________________________________
 
 	 enum encomparedates { After = 1, Equal = 0, Before = -1 };
