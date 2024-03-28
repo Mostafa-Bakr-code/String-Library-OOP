@@ -12,6 +12,8 @@
 #include "clsDate.h";
 #include "clsPeriod.h";
 #include "clsUtil.h";
+#include "clsPeriod.h";
+#include "clsInputValidate.h";
 
 
 using namespace std;
@@ -19,6 +21,9 @@ using namespace std;
 
 int main() {
 	
+
+    //__________________________________________________
+    //Testing clsPeriod.h
 
     clsPeriod Period1(clsDate(1, 1, 2022), clsDate(10, 1, 2022));
     Period1.Print();
@@ -29,9 +34,12 @@ int main() {
     cout << "\n";
 
     cout << clsPeriod::overlapCountBetween2Periods(Period1, Period2) << endl;
+    cout << "_____________________________________________";
 
     //___________________________________________________
     
+    //Testing clsUtil.h
+
     clsUtil::Srand();
     cout << clsUtil::randomNumber(1, 10) << endl;
     cout << clsUtil::GetRandomCharacter(clsUtil::CapitalLetter) << endl;
@@ -116,7 +124,7 @@ int main() {
     const short EncryptionKey = 2; //this is the key.
 
     string TextAfterEncryption, TextAfterDecryption;
-    string Text = "Mohammed Abu-Hadhoud";
+    string Text = "Mustafa Bakr";
     TextAfterEncryption = clsUtil::EncryptText(Text, EncryptionKey);
     TextAfterDecryption = clsUtil::DecryptText(TextAfterEncryption, EncryptionKey);
 
@@ -127,6 +135,38 @@ int main() {
     cout << "Text After Decryption  : ";
     cout << TextAfterDecryption << endl;
 
+    //_______________________________________________________________________
+    // Testing clsValidate.h 
+    cout << "_________________________________________________\n\n";
+
+    cout << clsInputValidate::IsNumberBetween(5, 1, 10) << endl;
+    cout << clsInputValidate::IsNumberBetween(5.5, 1.3, 10.8) << endl;
+
+    cout << clsInputValidate::IsDateBetween(clsDate(),
+        clsDate(8, 12, 2022),
+        clsDate(31, 12, 2022)) << endl;
+
+    cout << clsInputValidate::IsDateBetween(clsDate(),
+        clsDate(31, 12, 2022),
+        clsDate(8, 12, 2022)) << endl;
+
+    cout << "\nPlease Enter a Number:\n";
+    int x1 = clsInputValidate::ReadIntNumber("Invalid Number, Enter again:\n");
+    cout << "x1=" << x1;
+
+    cout << "\nPlease Enter a Number between 1 and 5:\n";
+    int y1 = clsInputValidate::ReadIntNumberBetween(1, 5, "Number is not within range, enter again:\n");
+    cout << "y1=" << y1;
+
+    cout << "\nPlease Enter a Double Number:\n";
+    double a1 = clsInputValidate::ReadDblNumber("Invalid Number, Enter again:\n");
+    cout << "a1=" << a1;
+
+    cout << "\nPlease Enter a Double Number between 1 and 5:\n";
+    double b1 = clsInputValidate::ReadDblNumberBetween(1, 5, "Number is not within range, enter again:\n");
+    cout << "b1=" << b1;
+
+    cout << endl << clsInputValidate::isValideDate(clsDate(31, 12, 2022)) << endl;
 
     system("pause>0");
 	return 0;
